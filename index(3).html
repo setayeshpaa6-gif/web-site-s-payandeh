@@ -1,0 +1,1459 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آکادمی هنر و مهارت | مسیر آینده تو</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+	
+:root {
+    --navy: #191631;
+    --navy2: #29234d;
+    --purple: #8065e9;
+    --purple2: #a58df5;
+    --pink: #e8a4d7;
+    --bg: #f8f7fc;
+    --white: #fff;
+    --text: #343149;
+    --muted: #858198;
+    --border: #eeeaf7;
+    --shadow: 0 15px 45px rgba(47,34,100,.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* نوار منو */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg,var(--purple),#b18af2);
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 7px 20px #8065e944;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #6f6b83;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--purple);
+}
+
+.nav-btn {
+    background: var(--navy);
+    color: white;
+    padding: 10px 21px;
+    border-radius: 30px;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: var(--purple);
+    transform: translateY(-3px);
+}
+
+/* صفحه اصلی و تصویر هدر */
+.hero {
+    min-height: 590px;
+    padding: 105px 0 115px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-image:
+      linear-gradient(135deg, rgba(25,22,49,.82), rgba(41,35,77,.62)),
+      url("resh.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.42);
+    color: #f1eaff;
+    backdrop-filter: blur(8px);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: clamp(35px,5vw,62px);
+    font-weight: 900;
+    line-height: 1.55;
+    margin: 23px auto 15px;
+    max-width: 900px;
+}
+
+.hero h1 span {
+    color: #d8c8ff;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: auto;
+    color: rgba(255,255,255,.9);
+    font-size: 14px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 27px;
+    border-radius: 35px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn-primary {
+    color: white;
+    background: linear-gradient(120deg,var(--purple),#a17ae9);
+    box-shadow: 0 9px 25px #8065e944;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px #8065e955;
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,.13);
+    color: white;
+    border: 1px solid rgba(255,255,255,.55);
+    backdrop-filter: blur(6px);
+}
+
+.btn-secondary:hover {
+    color: var(--purple);
+    border-color: var(--purple);
+}
+
+/* آمار */
+
+.stats {
+    margin-top: -38px;
+    position: relative;
+    z-index: 5;
+}
+
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background: white;
+    border-radius: 22px;
+    padding: 27px;
+    box-shadow: var(--shadow);
+}
+
+.stat {
+    text-align: center;
+    border-left: 1px solid var(--border);
+}
+
+.stat:last-child {
+    border: none;
+}
+
+.stat strong {
+    display: block;
+    font-size: 29px;
+    color: var(--purple);
+    font-weight: 900;
+}
+
+.stat span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* عنوان بخش‌ها */
+
+.section {
+    padding: 95px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title small {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.section-title h2 {
+    color: var(--navy);
+    font-size: 34px;
+    font-weight: 900;
+    margin: 7px 0;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* کارت رشته‌ها */
+
+.courses {
+    background: white;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+
+.course-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 23px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: #d9cdfb;
+}
+
+.course-top {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 17px;
+}
+
+.course-icon {
+    width: 67px;
+    height: 67px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 27px;
+    border-radius: 19px;
+}
+
+.icon-computer {
+    background: linear-gradient(135deg,#7056e5,#aa91fa);
+}
+
+.icon-photo {
+    background: linear-gradient(135deg,#d77bb9,#f0a6d4);
+}
+
+.icon-architecture {
+    background: linear-gradient(135deg,#378da9,#79c4d7);
+}
+
+.icon-fashion {
+    background: linear-gradient(135deg,#dc915c,#f0bd82);
+}
+
+.icon-child {
+    background: linear-gradient(135deg,#51a88b,#8bd1ac);
+}
+
+.course-top h3 {
+    font-size: 19px;
+    color: var(--navy);
+    font-weight: 800;
+}
+
+.course-top small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.course-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 19px;
+}
+
+.course-details {
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.course-details summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.course-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.course-details summary::after {
+    content: "+";
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1edff;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.course-details[open] summary::after {
+    content: "−";
+}
+
+.details-content {
+    padding-top: 19px;
+    animation: appear .35s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.details-content h4 {
+    color: var(--navy);
+    font-size: 13px;
+    margin: 14px 0 6px;
+}
+
+.details-content p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 2.1;
+}
+
+.details-content ul {
+    padding-right: 19px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.details-content li {
+    margin: 4px 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 9px;
+}
+
+.skill-tags span {
+    background: #f2efff;
+    color: #7158ce;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+/* درباره ما */
+
+.about {
+    background: linear-gradient(135deg,#f4f1ff,#fcf8fd);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.about-text small {
+    color: var(--purple);
+    font-weight: 800;
+}
+
+.about-text h2 {
+    color: var(--navy);
+    font-size: 33px;
+    line-height: 1.7;
+    margin: 12px 0 17px;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 13px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.feature {
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.feature i {
+    color: var(--purple);
+    margin-left: 7px;
+}
+
+.about-card {
+    background: linear-gradient(145deg,#211c46,#493b80);
+    color: white;
+    text-align: center;
+    border-radius: 27px;
+    padding: 55px 35px;
+    box-shadow: 0 20px 45px #28204b33;
+}
+
+.about-card i {
+    color: #d8b7ff;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: #ded9f3;
+    font-size: 13px;
+}
+
+/* مراحل */
+
+.steps {
+    background: white;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 23px;
+}
+
+.step {
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.step:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.step-number {
+    width: 55px;
+    height: 55px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 17px;
+    background: #f0ebff;
+    color: var(--purple);
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.step h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* مزایا */
+
+.advantages {
+    background: var(--bg);
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.advantage {
+    text-align: center;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.advantage:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.advantage i {
+    color: var(--purple);
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+.advantage h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.advantage p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* تماس */
+
+.contact {
+    background: linear-gradient(120deg,#191631,#39306c);
+    color: white;
+}
+
+.contact-box {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact-box > i {
+    font-size: 40px;
+    color: #d7b6ff;
+    margin-bottom: 18px;
+}
+
+.contact-box h2 {
+    font-size: 31px;
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    color: #d4d0e6;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.contact-box a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--navy);
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.contact-box a:hover {
+    background: var(--purple2);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* فوتر */
+
+footer {
+    background: #121126;
+    color: white;
+    padding: 40px 0 18px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 25px;
+}
+
+.footer-content h3 {
+    color: #c9b5ff;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.footer-content p {
+    color: #aaa6c0;
+    font-size: 12px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffffff25;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.socials a:hover {
+    background: var(--purple);
+    transform: translateY(-4px);
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #ffffff1c;
+    padding-top: 17px;
+    color: #8f8ba7;
+    font-size: 11px;
+}
+
+/* موبایل و تبلت */
+
+@media(max-width:900px) {
+    .nav-links {
+        gap: 13px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:650px) {
+    .navbar {
+        padding: 13px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .hero {
+        padding: 75px 0 95px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .stats-box {
+        padding: 20px 7px;
+    }
+
+    .stat strong {
+        font-size: 21px;
+    }
+
+    .stat span {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .course-grid,
+    .steps-grid,
+    .advantage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card {
+        padding: 23px 19px;
+    }
+
+    .about-text h2 {
+        font-size: 27px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box h2 {
+        font-size: 24px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 75px 0 90px;
+        background-position: center center;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </span>
+            آکادمی هنر و مهارت
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">خانه</a></li>
+                <li><a href="#courses">رشته‌ها</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#steps">مراحل شروع</a></li>
+                <li><a href="#contact">تماس با ما</a></li>
+            </ul>
+        </nav>
+
+        <a href="#contact" class="nav-btn">شروع یادگیری</a>
+
+    </div>
+</header>
+
+<main>
+
+<!-- بخش اصلی -->
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+
+        <div class="hero-label">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            دنیایی برای کشف استعدادهای تو
+        </div>
+
+        <h1>
+            استعدادت را کشف کن،
+            <span>آینده‌ات را بساز</span>
+        </h1>
+
+        <p>
+            علاقه‌هایت را به مهارت تبدیل کن.
+            در دنیای هنر، تکنولوژی و خلاقیت قدم بگذار
+            و مسیر تازه‌ای برای آینده خودت بساز.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#courses" class="btn btn-primary">
+                مشاهده رشته‌ها
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+            <a href="#about" class="btn btn-secondary">
+                درباره مجموعه
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- آمار -->
+
+<section class="stats">
+    <div class="container">
+        <div class="stats-box">
+
+            <div class="stat">
+                <strong>۵</strong>
+                <span>رشته آموزشی</span>
+            </div>
+
+            <div class="stat">
+                <strong>∞</strong>
+                <span>فرصت یادگیری</span>
+            </div>
+
+            <div class="stat">
+                <strong>۱۰۰٪</strong>
+                <span>تمرکز بر خلاقیت</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- رشته‌ها -->
+
+<section class="section courses" id="courses">
+    <div class="container">
+
+        <div class="section-title">
+            <small>EXPLORE YOUR PASSION</small>
+            <h2>رشته‌های آموزشی ما</h2>
+            <p>با دنیای هر رشته آشنا شو و مسیر مورد علاقه‌ات را پیدا کن.</p>
+        </div>
+
+        <div class="course-grid">
+
+            <!-- کامپیوتر -->
+
+            <article class="course-card">
+
+                <div class="course-top">
+                    <div class="course-icon icon-computer">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <div>
+                        <h3>مهندسی کامپیوتر</h3>
+                        <small>دنیای فناوری و نوآوری</small>
+                    </div>
+                </div>
+
+                <p class="course-description">
+                    مهندسی کامپیوتر یکی از رشته‌های جذاب و پرکاربرد دنیای امروز است.
+                    در این رشته با دنیای برنامه‌نویسی، نرم‌افزار، سخت‌افزار و فناوری‌های
+                    دیجیتال آشنا می‌شوی و یاد می‌گیری چگونه ایده‌هایت را به محصولات واقعی تبدیل کنی.
+                </p>
+
+                <details class="course-details">
+                    <summary>معرفی کامل رشته و مهارت‌ها</summary>
+
+                    <div class="details-content">
+
+                        <h4>در این رشته چه چیزهایی یاد می‌گیری؟</h4>
+                        <ul>
+                            <li>مبانی برنامه‌نویسی و حل مسئله</li>
+                            <li>طراحی و ساخت وب‌سایت</li>
+                            <li>آشنایی با نرم‌افزار و سیستم‌های کامپیوتری</li>
+                            <li>الگوریتم و تفکر منطقی</li>
+                            <li>آشنایی با پایگاه داده و فناوری اطلاعات</li>
+                        </ul>
+
+                        <h4>این رشته مناسب چه کسانی است؟</h4>
+                        <p>
+                            افرادی که به فناوری، کامپیوتر، حل مسئله،
+                            ساخت برنامه و کشف روش‌های جدید علاقه دارند.
+                        </p>
+
+                        <h4>زمینه‌های فعالیت و آینده شغلی</h4>
+                        <p>
+                            برنامه‌نویسی، طراحی وب، توسعه نرم‌افزار،
+                            پشتیبانی فناوری اطلاعات، شبکه و فعالیت در شرکت‌های فناوری.
+                        </p>
+
+                        <div class="skill-tags">
+                            <span>برنامه‌نویسی</span>
+                            <span>طراحی وب</span>
+                            <span>فناوری</span>
+                            <span>حل مسئله</span>
+                        </div>
+
+                    </div>
+                </details>
+
+            </article>
+
+            <!-- عکاسی -->
+
+            <article class="course-card">
+
+                <div class="course-top">
+                    <div class="course-icon icon-photo">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+
+                    <div>
+                        <h3>عکاسی</h3>
+                        <small>هنر ثبت لحظه‌های ماندگار</small>
+                    </div>
+                </div>
+
+                <p class="course-description">
+                    عکاسی هنری است که با نور، زاویه و خلاقیت،
+                    لحظه‌ها را به تصویر تبدیل می‌کند. در این رشته یاد می‌گیری
+                    چگونه از نگاه هنری خود برای خلق عکس‌هایی زیبا و تأثیرگذار استفاده کنی.
+                </p>
+
+                <details class="course-details">
+                    <summary>معرفی کامل رشته و مهارت‌ها</summary>
+
+                    <div class="details-content">
+
+                        <h4>در این رشته چه چیزهایی یاد می‌گیری؟</h4>
+                        <ul>
+                            <li>شناخت دوربین و تنظیمات آن</li>
+                            <li>نورپردازی و استفاده از نور طبیعی</li>
+                            <li>ترکیب‌بندی و انتخاب زاویه مناسب</li>
+                            <li>عکاسی پرتره، طبیعت و تبلیغاتی</li>
+                            <li>ویرایش و اصلاح تصاویر</li>
+                        </ul>
+
+                        <h4>این رشته مناسب چه کسانی است؟</h4>
+                        <p>
+                            افرادی که به هنر، زیبایی‌شناسی، ثبت خاطرات،
+                            دیدن جزئیات و خلق تصاویر خلاقانه علاقه دارند.
+                        </p>
+
+                        <h4>زمینه‌های فعالیت و آینده شغلی</h4>
+                        <p>
+                            عکاسی مراسم، پرتره، تبلیغاتی، صنعتی،
+                            طبیعت، تولید محتوای تصویری و همکاری با رسانه‌ها.
+                        </p>
+
+                        <div class="skill-tags">
+                            <span>نورپردازی</span>
+                            <span>ترکیب‌بندی</span>
+                            <span>ویرایش عکس</span>
+                            <span>هنر تصویری</span>
+                        </div>
+
+                    </div>
+                </details>
+
+            </article>
+
+            <!-- معماری -->
+
+            <article class="course-card">
+
+                <div class="course-top">
+                    <div class="course-icon icon-architecture">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <div>
+                        <h3>معماری</h3>
+                        <small>هنر خلق فضاهای زیبا</small>
+                    </div>
+                </div>
+
+                <p class="course-description">
+                    معماری ترکیبی از هنر، علم و خلاقیت است.
+                    در این رشته با اصول طراحی ساختمان و فضاهای داخلی آشنا می‌شوی
+                    و یاد می‌گیری چگونه محیط‌هایی زیبا، کاربردی و متناسب با نیاز انسان طراحی کنی.
+                </p>
+
+                <details class="course-details">
+                    <summary>معرفی کامل رشته و مهارت‌ها</summary>
+
+                    <div class="details-content">
+
+                        <h4>در این رشته چه چیزهایی یاد می‌گیری؟</h4>
+                        <ul>
+                            <li>اصول طراحی و شناخت فضا</li>
+                            <li>نقشه‌کشی و ترسیم فنی</li>
+                            <li>شناخت فرم، رنگ و تناسبات</li>
+                            <li>طراحی داخلی و دکوراسیون</li>
+                            <li>آشنایی با نرم‌افزارهای معماری</li>
+                        </ul>
+
+                        <h4>این رشته مناسب چه کسانی است؟</h4>
+                        <p>
+                            افرادی که به طراحی، نقاشی، ساخت‌وساز،
+                            هندسه، خلاقیت و تغییر فضای اطراف خود علاقه دارند.
+                        </p>
+
+                        <h4>زمینه‌های فعالیت و آینده شغلی</h4>
+                        <p>
+                            طراحی معماری، طراحی داخلی، ترسیم نقشه،
+                            مدل‌سازی سه‌بعدی، دکوراسیون و همکاری با دفاتر معماری.
+                        </p>
+
+                        <div class="skill-tags">
+                            <span>طراحی فضا</span>
+                            <span>نقشه‌کشی</span>
+                            <span>دکوراسیون</span>
+                            <span>مدل‌سازی</span>
+                        </div>
+
+                    </div>
+                </details>
+
+            </article>
+
+            <!-- طراحی دوخت -->
+
+            <article class="course-card">
+
+                <div class="course-top">
+                    <div class="course-icon icon-fashion">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+
+                    <div>
+                        <h3>طراحی دوخت</h3>
+                        <small>از ایده تا خلق لباس</small>
+                    </div>
+                </div>
+
+                <p class="course-description">
+                    طراحی دوخت دنیایی از رنگ، پارچه، سلیقه و خلاقیت است.
+                    در این رشته می‌توانی ایده‌های ذهنی خود را به لباس‌هایی زیبا
+                    و کاربردی تبدیل کنی و با مراحل طراحی تا دوخت آشنا شوی.
+                </p>
+
+                <details class="course-details">
+                    <summary>معرفی کامل رشته و مهارت‌ها</summary>
+
+                    <div class="details-content">
+
+                        <h4>در این رشته چه چیزهایی یاد می‌گیری؟</h4>
+                        <ul>
+                            <li>طراحی لباس و شناخت فرم پوشاک</li>
+                            <li>شناخت انواع پارچه و کاربرد آن‌ها</li>
+                            <li>اندازه‌گیری و الگوکشی</li>
+                            <li>برش پارچه و دوخت اصولی</li>
+                            <li>تزیین لباس و شناخت سبک‌های پوشش</li>
+                        </ul>
+
+                        <h4>این رشته مناسب چه کسانی است؟</h4>
+                        <p>
+                            افرادی که به مد، لباس، طراحی، رنگ،
+                            هنرهای دستی و ساخت محصولات خلاقانه علاقه دارند.
+                        </p>
+
+                        <h4>زمینه‌های فعالیت و آینده شغلی</h4>
+                        <p>
+                            طراحی لباس، خیاطی، الگوسازی، مزون‌داری،
+                            تولید پوشاک، طراحی لباس سفارشی و راه‌اندازی کسب‌وکار شخصی.
+                        </p>
+
+                        <div class="skill-tags">
+                            <span>طراحی لباس</span>
+                            <span>الگوسازی</span>
+                            <span>خیاطی</span>
+                            <span>مد و پوشاک</span>
+                        </div>
+
+                    </div>
+                </details>
+
+            </article>
+
+            <!-- کودک -->
+
+            <article class="course-card">
+
+                <div class="course-top">
+                    <div class="course-icon icon-child">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+
+                    <div>
+                        <h3>کودک</h3>
+                        <small>دنیای رنگارنگ خلاقیت</small>
+                    </div>
+                </div>
+
+                <p class="course-description">
+                    دنیای کودکان سرشار از کنجکاوی، بازی و یادگیری است.
+                    در حوزه آموزش کودک با روش‌های پرورش خلاقیت،
+                    تقویت مهارت‌های فردی و فعالیت‌های متناسب با سن کودکان آشنا می‌شوی.
+                </p>
+
+                <details class="course-details">
+                    <summary>معرفی کامل رشته و مهارت‌ها</summary>
+
+                    <div class="details-content">
+
+                        <h4>در این رشته چه چیزهایی یاد می‌گیری؟</h4>
+                        <ul>
+                            <li>آشنایی با مراحل رشد کودک</li>
+                            <li>بازی‌های آموزشی و خلاقانه</li>
+                            <li>فعالیت‌های هنری و کاردستی</li>
+                            <li>تقویت مهارت‌های ارتباطی و اجتماعی</li>
+                            <li>آشنایی با اصول مراقبت و آموزش کودک</li>
+                        </ul>
+
+                        <h4>این رشته مناسب چه کسانی است؟</h4>
+                        <p>
+                            افرادی که به ارتباط با کودکان،
+                            آموزش، بازی‌های خلاقانه و کمک به رشد و یادگیری آن‌ها علاقه دارند.
+                        </p>
+
+                        <h4>زمینه‌های فعالیت و آینده شغلی</h4>
+                        <p>
+                            فعالیت در مراکز آموزشی و کودک،
+                            اجرای برنامه‌های خلاقانه، مربی‌گری کودک
+                            و طراحی فعالیت‌های آموزشی متناسب با سن.
+                        </p>
+
+                        <div class="skill-tags">
+                            <span>آموزش کودک</span>
+                            <span>بازی خلاقانه</span>
+                            <span>هنر کودک</span>
+                            <span>رشد و یادگیری</span>
+                        </div>
+
+                    </div>
+                </details>
+
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- درباره ما -->
+
+<section class="section about" id="about">
+    <div class="container about-content">
+
+        <div class="about-text">
+            <small>درباره مجموعه ما</small>
+
+            <h2>
+                هر استعداد، فرصتی برای ساختن یک آینده متفاوت است.
+            </h2>
+
+            <p>
+                ما باور داریم هر فرد توانایی و استعداد منحصربه‌فردی دارد.
+                هدف ما معرفی مسیرهای آموزشی متنوع و ایجاد انگیزه
+                برای یادگیری، خلاقیت و پیشرفت است.
+            </p>
+
+            <p>
+                در این مجموعه می‌توانی با رشته‌های مختلف آشنا شوی،
+                علایق خود را بهتر بشناسی و با دیدی روشن‌تر
+                برای آینده تحصیلی و شغلی خود تصمیم بگیری.
+            </p>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    معرفی رشته‌های متنوع
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    آشنایی با مهارت‌ها
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    توجه به خلاقیت
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    شناخت مسیر آینده
+                </div>
+            </div>
+        </div>
+
+        <div class="about-card">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>آینده از یک انتخاب شروع می‌شود</h3>
+            <p>
+                به علاقه‌هایت فرصت بده.
+                شاید مهارتی که امروز یاد می‌گیری،
+                آغاز بزرگ‌ترین موفقیت فردای تو باشد.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- مراحل شروع -->
+
+<section class="section steps" id="steps">
+    <div class="container">
+
+        <div class="section-title">
+            <small>START YOUR JOURNEY</small>
+            <h2>مسیر شروع یادگیری</h2>
+            <p>برای انتخاب مسیر مورد علاقه‌ات این سه قدم را دنبال کن.</p>
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step">
+                <div class="step-number">۱</div>
+                <h3>شناخت علاقه‌ها</h3>
+                <p>
+                    رشته‌ها را بررسی کن و ببین به کدام زمینه
+                    بیشتر علاقه و استعداد داری.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">۲</div>
+                <h3>بررسی و انتخاب</h3>
+                <p>
+                    مهارت‌ها، ویژگی‌ها و زمینه‌های فعالیت
+                    هر رشته را با دقت بشناس.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">۳</div>
+                <h3>شروع مسیر تازه</h3>
+                <p>
+                    با برنامه‌ریزی و انگیزه برای یادگیری
+                    و ساختن آینده خود قدم بردار.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- مزایا -->
+
+<section class="section advantages">
+    <div class="container">
+
+        <div class="section-title">
+            <small>WHY LEARNING MATTERS</small>
+            <h2>چرا یادگیری مهارت مهم است؟</h2>
+            <p>هر مهارت تازه می‌تواند دریچه‌ای به فرصت‌های جدید باشد.</p>
+        </div>
+
+        <div class="advantage-grid">
+
+            <div class="advantage">
+                <i class="fa-solid fa-brain"></i>
+                <h3>تقویت خلاقیت</h3>
+                <p>
+                    یادگیری به تو کمک می‌کند متفاوت فکر کنی
+                    و راه‌حل‌های تازه پیدا کنی.
+                </p>
+            </div>
+
+            <div class="advantage">
+                <i class="fa-solid fa-award"></i>
+                <h3>افزایش توانایی</h3>
+                <p>
+                    با کسب مهارت‌های جدید،
+                    توانایی‌های فردی خود را توسعه بده.
+                </p>
+            </div>
+
+            <div class="advantage">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>فرصت‌های بیشتر</h3>
+                <p>
+                    مهارت‌آموزی می‌تواند مسیرهای تازه‌ای
+                    برای تحصیل و فعالیت شغلی ایجاد کند.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- تماس با ما -->
+
+<section class="section contact" id="contact">
+    <div class="container">
+
+        <div class="contact-box">
+            <i class="fa-solid fa-paper-plane"></i>
+
+            <h2>آماده‌ای آینده‌ات را بسازی؟</h2>
+
+            <p>
+                برای دریافت اطلاعات بیشتر درباره رشته‌ها،
+                شرایط آموزشی و ثبت‌نام با ما در ارتباط باش.
+            </p>
+
+            <a href="mailto:info@example.com">
+                <i class="fa-solid fa-envelope"></i>
+                ارتباط با ما
+            </a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<!-- فوتر -->
+
+<footer>
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>آکادمی هنر و مهارت</h3>
+                <p>استعدادت را کشف کن و آینده‌ات را بساز.</p>
+            </div>
+
+            <div class="socials">
+                <a href="#" aria-label="اینستاگرام">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="تلگرام">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+
+                <a href="#" aria-label="واتساپ">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © تمامی حقوق این وب‌سایت محفوظ است.
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
